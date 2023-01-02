@@ -9,7 +9,7 @@ Leverages [Pydantic](https://github.com/pydantic/pydantic) as the base classes f
 [HTTPX](https://github.com/encode/httpx) as the HTTP client
 and [Typer](https://typer.tiangolo.com/) as the CLI library.
 
-See [render](./lapidary-render) readme for command line interface to generate and update models and stubs.
+See [render](../lapidary-render) readme for command line interface to generate and update models and stubs.
 
 ## Supported and planned OpenAPI features
 
