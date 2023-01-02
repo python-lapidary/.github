@@ -9,7 +9,7 @@ Leverages [Pydantic](https://github.com/pydantic/pydantic) as the base classes f
 [HTTPX](https://github.com/encode/httpx) as the HTTP client
 and [Typer](https://typer.tiangolo.com/) as the CLI library.
 
-See [render](../lapidary-render) readme for command line interface to generate and update models and stubs.
+See [render](https://github.com/python-lapidary/lapidary-render) readme for command line interface to generate and update models and stubs.
 
 ## Supported and planned OpenAPI features
 
@@ -18,8 +18,8 @@ See [render](../lapidary-render) readme for command line interface to generate a
 - Schema objects of object type are source to generate model classes.
 - Enums:
 
-  Currently only primitive values are supported, but OpenAPI specifies no such limitation - any valid JSON value should be supported ([#30](#30)).
-- oneOf, allOf, anyOf, not: see [discussion](#20) and concepts below.
+  Currently only primitive values are supported, but OpenAPI specifies no such limitation - any valid JSON value should be supported ([#30](python-lapidary/lapidary#30)).
+- oneOf, allOf, anyOf, not: see [discussion](python-lapidary/lapidary#20) and concepts below.
 
   Currently, oneOf is implemented as `typing.Union`, which is not ideal. Also, Pydantic doesn't allow models to have both \_\_root__ and own properties, which
   isn't compatible with OpenAPI.
@@ -59,7 +59,7 @@ See [render](../lapidary-render) readme for command line interface to generate a
   Operation parameters are uniquely identified by their name and the value of the `in` attribute. It is possible to have parameter named `param` in
   all of: path, query, cookies and headers.
 
-  Lapidary uses Hungarian notation for method parameter names. See [#29](#29)
+  Lapidary uses Hungarian notation for method parameter names. See [#29](python-lapidary/lapidary#29)
 
 ### Planned
 
@@ -70,7 +70,7 @@ See [render](../lapidary-render) readme for command line interface to generate a
 
 Lapidary applies JSONPatch files from src/patches directory to the OpenAPI before generating the client code.
 
-Planned: [Plug-ins](#31)
+Planned: [Plug-ins](python-lapidary/lapidary#31)
 
 ## Concepts
 
