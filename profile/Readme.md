@@ -18,8 +18,8 @@ See [render](https://github.com/python-lapidary/lapidary-render) readme for comm
 - Schema objects of object type are source to generate model classes.
 - Enums:
 
-  Currently only primitive values are supported, but OpenAPI specifies no such limitation - any valid JSON value should be supported ([#30](python-lapidary/lapidary#30)).
-- oneOf, allOf, anyOf, not: see [discussion](python-lapidary/lapidary#20) and concepts below.
+  Currently only primitive values are supported, but OpenAPI specifies no such limitation - any valid JSON value should be supported (python-lapidary/lapidary#30).
+- oneOf, allOf, anyOf, not: see python-lapidary/lapidary#20 and concepts below.
 
   Currently, oneOf is implemented as `typing.Union`, which is not ideal. Also, Pydantic doesn't allow models to have both \_\_root__ and own properties, which
   isn't compatible with OpenAPI.
@@ -59,7 +59,7 @@ See [render](https://github.com/python-lapidary/lapidary-render) readme for comm
   Operation parameters are uniquely identified by their name and the value of the `in` attribute. It is possible to have parameter named `param` in
   all of: path, query, cookies and headers.
 
-  Lapidary uses Hungarian notation for method parameter names. See [#29](python-lapidary/lapidary#29)
+  Lapidary uses Hungarian notation for method parameter names. See python-lapidary/lapidary#29
 
 ### Planned
 
@@ -70,7 +70,7 @@ See [render](https://github.com/python-lapidary/lapidary-render) readme for comm
 
 Lapidary applies JSONPatch files from src/patches directory to the OpenAPI before generating the client code.
 
-Planned: [Plug-ins](python-lapidary/lapidary#31)
+Planned: Plug-ins python-lapidary/lapidary#31
 
 ## Concepts
 
